@@ -22,6 +22,7 @@ private:
   int _year;           // the model year for the car (ex. 1990, 2022, ...)
   int _numRatings;     // number of ratings for this car
   double _rating;      // current overall rating for this car
+
 public:
   // default constructor
   CarRating() :
@@ -47,9 +48,7 @@ public:
   double operator+=(int newRating) {return addNewRating(newRating);}
 
   // compares two car ratings for equality
-  // two ratings are considered equal if they have the same make, model and year. Two
-  //   car ratings can be considered equal even if they do not have the
-  //   same rating or number of ratings!
+  // two ratings are considered equal if they have the same make, model and year
   bool operator==(const CarRating &other) const;
   //overload the != for use in the find method within CarRatingService.cpp
   bool operator!=(const CarRating &other) const; 
